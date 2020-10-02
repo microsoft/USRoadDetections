@@ -28,7 +28,7 @@ The road extraction is done in four stages (first dataset went through two stage
 ![](/images/scheme.png)
 
 #### CNN architecture
-Our network was based on UNet and ResNet and the following papers [U-Net] (https://arxiv.org/abs/1505.04597), [Res-Net] (https://arxiv.org/pdf/1512.03385.pdf), [Res-Net] (https://arxiv.org/pdf/1711.10684.pdf).
+Our network was based on UNet and ResNet and the following papers [U-Net] (https://arxiv.org/abs/1505.04597), [Res U-Net] (https://arxiv.org/pdf/1512.03385.pdf), [Res U-Net] (https://arxiv.org/pdf/1711.10684.pdf).
 The model was trained on 512x512 images, it is fully-convolutional, meaning that the model can be applied to an image of any size (constrained by GPU memory, 1088x1088 in our case).
 
 #### Training details
@@ -40,11 +40,11 @@ These are the intermediate stage metrics we use to track CNN model improvements 
 
 #### Description
 Geometry generation consists of the following steps
-1. Denoising with filters and morphological operations
+1. Image postprocessing
 2. Thinning
-3. Search algorithms to make missed connections
-4. Graph construction with Ramer–Douglas–Peucker algorithm
-5. Simulated annealing to finalize road shapes and prolong where needed
+3. Connectivity improvement
+4. Graph construction
+5. Finalizing road shapes and network quality
 6. Stiching road geojsons between neighboring images where needed
 
 #### Metrics
