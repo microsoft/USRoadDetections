@@ -20,8 +20,8 @@ For Intensive Documentation and Tutorials, Refer to [GeoJson Blog](http://geojso
 #### Creation Details:
 The road extraction is done in four stages (first dataset went through two stages and second went through all four):
 1.	Semantic Segmentation – Recognizing road pixels on the aerial image using Convolutional Neural Network (CNN).
-2.	Geometry Generation - A series of algorithms and processes transforming output of semantic segmetation into a roads in geometry format.
-3.  Conflation & Cutting - Exluding roads and parts of roads that already exist in the road network (OSM).
+2.	Geometry Generation - A series of algorithms and processes transforming output of semantic segmentation into roads in geometry format.
+3.  Conflation & Cutting - Excluding roads and parts of roads that already exist in the road network (OSM).
 4.  Classification - A classifier to filter out low-confidence roads and predict a road type.
 
 ### Scheme
